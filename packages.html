@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashmir Packages - Kashveil Tour and Travels</title>
+    <link rel="icon" type="image/png" href="static/images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#1b4332',
+                            lightgreen: '#2d6a4f',
+                            gold: '#d4af37',
+                            lightgold: '#f3e5ab'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass-nav py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html">
+                        <img class="h-16 w-auto" src="static/images/logo.png" alt="Kashveil Logo">
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center font-medium text-sm lg:text-base">
+                    <a href="index.html" class="text-gray-800 hover:text-brand-gold transition-colors">HOME</a>
+                    
+                    <div class="relative group">
+                        <a href="packages.html" class="text-brand-green hover:text-brand-gold transition-colors flex items-center">
+                            KASHMIR PACKAGES
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left">
+                            <div class="py-1">
+                                <a href="romantic-kashmir.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Romantic Kashmir</a>
+                                <a href="gulmarg-adventure.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Gulmarg Adventure</a>
+                                <a href="kashmir-family-tour.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Family Tour</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="ladakh-expeditions.html" class="text-gray-800 hover:text-brand-gold transition-colors">LADAKH EXPEDITIONS</a>
+                    <a href="about.html" class="text-gray-800 hover:text-brand-gold transition-colors">ABOUT US</a>
+                    <a href="gallery.html" class="text-gray-800 hover:text-brand-gold transition-colors">GALLERY</a>
+                    
+                    <a href="contact.html" class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">BOOK NOW</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-800 hover:text-brand-green focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">HOME</a>
+                <a href="packages.html" class="block px-3 py-2 text-brand-green font-medium">KASHMIR PACKAGES</a>
+                <a href="ladakh-expeditions.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">LADAKH EXPEDITIONS</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">ABOUT US</a>
+                <a href="gallery.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">GALLERY</a>
+                <a href="contact.html" class="block px-3 py-2 text-brand-green font-bold">BOOK NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative h-[40vh] min-h-[300px] flex items-center justify-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="static/images/mountain-land-horse.jpg" alt="Kashmir Packages" class="w-full h-full object-cover" style="object-position: center 60%;">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 w-full max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white font-bold mb-4 drop-shadow-lg tracking-wide uppercase">Kashmir Packages</h1>
+            <p class="text-lg md:text-xl text-white drop-shadow-md font-light">Explore our handpicked itineraries for the perfect getaway.</p>
+        </div>
+    </header>
+
+    <!-- Packages Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Filter Bar (Optional Visual) -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-2 rounded-full bg-brand-green text-white font-medium text-sm transition-colors shadow-md">All Packages</button>
+                <button class="px-6 py-2 rounded-full bg-white text-gray-700 border border-gray-200 hover:border-brand-green hover:text-brand-green font-medium text-sm transition-colors shadow-sm">Couples</button>
+                <button class="px-6 py-2 rounded-full bg-white text-gray-700 border border-gray-200 hover:border-brand-green hover:text-brand-green font-medium text-sm transition-colors shadow-sm">Family</button>
+                <button class="px-6 py-2 rounded-full bg-white text-gray-700 border border-gray-200 hover:border-brand-green hover:text-brand-green font-medium text-sm transition-colors shadow-sm">Adventure</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 flex flex-col">
+                    <div class="relative h-64 overflow-hidden flex-shrink-0">
+                        <img src="static/images/dal-lake.jpg" alt="Romantic Kashmir" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-brand-green shadow-sm">5 Days / 4 Nights</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 font-serif">Romantic Kashmir Escape</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">A perfect getaway for couples featuring a luxurious houseboat stay on Dal Lake and a gondola ride in Gulmarg.</p>
+                        
+                        <div class="flex flex-col space-y-2 mb-6 text-sm text-gray-500 flex-grow">
+                            <div class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Houseboat Stay</div>
+                            <div class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Srinagar, Gulmarg, Pahalgam</div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
+                            <div>
+                                <span class="text-xs text-gray-500 block">Starting from</span>
+                                <span class="text-lg font-bold text-brand-green">₹15,999</span>
+                            </div>
+                            <a href="romantic-kashmir.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 flex flex-col">
+                    <div class="relative h-64 overflow-hidden flex-shrink-0">
+                        <img src="static/images/scene.jpg" alt="Gulmarg Adventure" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-brand-green shadow-sm">4 Days / 3 Nights</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 font-serif">Gulmarg Winter Adventure</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Experience the thrill of skiing and snowboarding in the pristine snow-covered slopes of Gulmarg.</p>
+                        
+                        <div class="flex flex-col space-y-2 mb-6 text-sm text-gray-500 flex-grow">
+                            <div class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Skiing & Gondola Ride</div>
+                            <div class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Premium Resort Stay</div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
+                            <div>
+                                <span class="text-xs text-gray-500 block">Starting from</span>
+                                <span class="text-lg font-bold text-brand-green">₹12,499</span>
+                            </div>
+                            <a href="gulmarg-adventure.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 flex flex-col">
+                    <div class="relative h-64 overflow-hidden flex-shrink-0">
+                        <img src="static/images/dal-lake-2.jpg" alt="Family Tour" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-brand-green shadow-sm">6 Days / 5 Nights</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 font-serif">Kashmir Family Holiday</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">A relaxing and memorable journey for the entire family covering all major attractions comfortably.</p>
+                        
+                        <div class="flex flex-col space-y-2 mb-6 text-sm text-gray-500 flex-grow">
+                            <div class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Family-friendly Hotels</div>
+                            <div class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Mughal Gardens, Sonamarg</div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
+                            <div>
+                                <span class="text-xs text-gray-500 block">Starting from</span>
+                                <span class="text-lg font-bold text-brand-green">₹18,999</span>
+                            </div>
+                            <a href="kashmir-family-tour.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Package 4 -->
+                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 flex flex-col">
+                    <div class="relative h-64 overflow-hidden flex-shrink-0">
+                        <img src="static/images/vertical.jpg" alt="Ladakh Expedition" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style="object-position: center 20%;">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-brand-green shadow-sm">7 Days / 6 Nights</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 font-serif">Ladakh Bike Expedition</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Conquer the highest motorable passes and witness the surreal beauty of Pangong Tso and Nubra Valley.</p>
+                        
+                        <div class="flex flex-col space-y-2 mb-6 text-sm text-gray-500 flex-grow">
+                            <div class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Royal Enfield Bikes</div>
+                            <div class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Leh, Nubra, Pangong</div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
+                            <div>
+                                <span class="text-xs text-gray-500 block">Starting from</span>
+                                <span class="text-lg font-bold text-brand-green">₹28,999</span>
+                            </div>
+                            <a href="ladakh-bike-expedition.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-green text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="static/images/logo.png" alt="Kashveil Logo" class="h-16 bg-white p-2 rounded-lg mb-4">
+                    <p class="text-gray-300 mb-4 max-w-md">Experience the true essence of paradise with our carefully curated luxury tours and local expertise across Kashmir and Ladakh.</p>
+                </div>
+                <div>
+                    <h4 class="text-brand-gold font-serif text-xl mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="packages.html" class="hover:text-white transition-colors">Kashmir Packages</a></li>
+                        <li><a href="ladakh-expeditions.html" class="hover:text-white transition-colors">Ladakh Expeditions</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-brand-gold font-serif text-xl mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Srinagar, Jammu and Kashmir</li>
+                        <li>Phone: 9906891014 / 7006191014</li>
+                        <li>Email: Kashveilholiday@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>&copy; 2026 Kashveil Tour and Travels. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulmarg Winter Adventure - Kashveil Tour and Travels</title>
+    <link rel="icon" type="image/png" href="static/images/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#1b4332', lightgreen: '#2d6a4f', gold: '#d4af37', lightgold: '#f3e5ab'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%); }
+        .timeline-item::before { content: ''; position: absolute; left: -33px; top: 6px; width: 16px; height: 16px; border-radius: 50%; background-color: #d4af37; border: 3px solid white; box-shadow: 0 0 0 2px #d4af37; }
+        .timeline-item::after { content: ''; position: absolute; left: -26px; top: 24px; bottom: -32px; width: 2px; background-color: #e5e7eb; }
+        .timeline-item:last-child::after { display: none; }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass-nav py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"><img class="h-16 w-auto" src="static/images/logo.png" alt="Kashveil Logo"></a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center font-medium text-sm lg:text-base">
+                    <a href="index.html" class="text-gray-800 hover:text-brand-gold transition-colors">HOME</a>
+                    <a href="packages.html" class="text-brand-green hover:text-brand-gold transition-colors">KASHMIR PACKAGES</a>
+                    <a href="ladakh-expeditions.html" class="text-gray-800 hover:text-brand-gold transition-colors">LADAKH EXPEDITIONS</a>
+                    <a href="about.html" class="text-gray-800 hover:text-brand-gold transition-colors">ABOUT US</a>
+                    <a href="gallery.html" class="text-gray-800 hover:text-brand-gold transition-colors">GALLERY</a>
+                    <a href="contact.html" class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">BOOK NOW</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-800 hover:text-brand-green focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-800">HOME</a>
+                <a href="packages.html" class="block px-3 py-2 text-brand-green font-medium">KASHMIR PACKAGES</a>
+                <a href="ladakh-expeditions.html" class="block px-3 py-2 text-gray-800">LADAKH EXPEDITIONS</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-800">ABOUT US</a>
+                <a href="gallery.html" class="block px-3 py-2 text-gray-800">GALLERY</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[60vh] min-h-[400px] flex items-end pb-16 pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="static/images/scene.jpg" alt="Gulmarg Winter Adventure" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 px-4 w-full max-w-7xl mx-auto">
+            <div class="inline-block bg-brand-gold text-white font-bold px-4 py-1 rounded-full text-sm mb-4">4 Days / 3 Nights</div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white font-bold mb-4 drop-shadow-lg">Gulmarg Winter Adventure</h1>
+            <p class="text-xl text-gray-200 max-w-2xl font-light">Experience the thrill of skiing and snowboarding in the pristine snow-covered slopes of Gulmarg.</p>
+        </div>
+    </header>
+
+    <div class="bg-white border-b shadow-sm relative z-20 -mt-8 mx-4 md:mx-auto max-w-6xl rounded-xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6">
+            <div class="flex items-center space-x-3">
+                <div class="text-brand-green bg-brand-green/10 p-2 rounded-full"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                <div><p class="text-xs text-gray-500 uppercase font-semibold">Duration</p><p class="font-bold text-gray-900">4D / 3N</p></div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <div class="text-brand-green bg-brand-green/10 p-2 rounded-full"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>
+                <div><p class="text-xs text-gray-500 uppercase font-semibold">Pickup</p><p class="font-bold text-gray-900">Srinagar Airport</p></div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <div class="text-brand-green bg-brand-green/10 p-2 rounded-full"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div>
+                <div><p class="text-xs text-gray-500 uppercase font-semibold">Group Size</p><p class="font-bold text-gray-900">Flexible</p></div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <div class="text-brand-green bg-brand-green/10 p-2 rounded-full"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg></div>
+                <div><p class="text-xs text-gray-500 uppercase font-semibold">Stay</p><p class="font-bold text-gray-900">Ski Resort</p></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-2 space-y-12">
+                <div>
+                    <h2 class="text-3xl font-serif text-brand-green font-bold mb-6">Package Overview</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-4">
+                        Embrace the winter wonderland of Gulmarg, the ultimate destination for snow lovers and adventure enthusiasts. This 4-day action-packed itinerary focuses on experiencing the best winter sports in the Himalayas.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl font-serif text-brand-green font-bold mb-8">Day-wise Itinerary</h2>
+                    <div class="pl-8 relative space-y-8">
+                        <div class="timeline-item relative">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Day 1: Arrival & Transfer to Gulmarg</h3>
+                            <p class="text-brand-gold font-medium mb-3">Gulmarg</p>
+                            <p class="text-gray-600 mb-4">Arrive at Srinagar airport and transfer directly to your premium ski resort in Gulmarg. Spend the evening acclimatizing to the winter weather and enjoy a cozy dinner.</p>
+                        </div>
+                        <div class="timeline-item relative">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Day 2: Gondola Ride & Snow Activities</h3>
+                            <p class="text-brand-gold font-medium mb-3">Gulmarg</p>
+                            <p class="text-gray-600 mb-4">Experience the famous Gulmarg Gondola up to Phase 2 (Apharwat Peak). Enjoy breathtaking views and engage in snow activities like sledding or a snowmobile ride.</p>
+                        </div>
+                        <div class="timeline-item relative">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Day 3: Skiing Lessons</h3>
+                            <p class="text-brand-gold font-medium mb-3">Gulmarg</p>
+                            <p class="text-gray-600 mb-4">Spend the day learning to ski on the gentle slopes of Gulmarg with a professional instructor. Equipment and guidance will be provided.</p>
+                        </div>
+                        <div class="timeline-item relative">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Day 4: Departure</h3>
+                            <p class="text-brand-gold font-medium mb-3">Srinagar</p>
+                            <p class="text-gray-600 mb-4">Transfer back to Srinagar airport for your onward journey, carrying the thrill of the adventure back home.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <h2 class="text-2xl font-serif text-brand-green font-bold mb-6">Inclusions & Exclusions</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                What's Included
+                            </h3>
+                            <ul class="space-y-3 text-gray-600 text-sm">
+                                <li class="flex items-start"><span class="mr-2">•</span> 3 Nights accommodation in Gulmarg</li>
+                                <li class="flex items-start"><span class="mr-2">•</span> Daily Breakfast and Dinner</li>
+                                <li class="flex items-start"><span class="mr-2">•</span> Transfers via chained 4x4 vehicles if needed</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                                <svg class="w-6 h-6 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                What's Excluded
+                            </h3>
+                            <ul class="space-y-3 text-gray-600 text-sm">
+                                <li class="flex items-start"><span class="mr-2">•</span> Flight tickets</li>
+                                <li class="flex items-start"><span class="mr-2">•</span> Gondola tickets and Skiing gear rental</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="sticky top-28 space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100">
+                        <p class="text-sm text-gray-500 font-semibold mb-1">Starting from</p>
+                        <div class="flex items-baseline mb-6">
+                            <span class="text-3xl font-bold text-brand-green">₹12,499</span>
+                            <span class="text-gray-500 ml-2">/ per person</span>
+                        </div>
+                        <form class="space-y-4">
+                            <div><input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-brand-green focus:ring-brand-green p-2 border" placeholder="Your Name"></div>
+                            <div><input type="tel" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-brand-green focus:ring-brand-green p-2 border" placeholder="Phone Number"></div>
+                            <button type="button" class="w-full bg-brand-green text-white font-bold py-3 rounded-lg hover:bg-brand-lightgreen transition-colors shadow-lg">Send Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-green text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="static/images/logo.png" alt="Kashveil Logo" class="h-16 bg-white p-2 rounded-lg mb-4">
+                    <p class="text-gray-300 mb-4 max-w-md">Experience the true essence of paradise with our carefully curated luxury tours and local expertise across Kashmir and Ladakh.</p>
+                </div>
+                <div>
+                    <h4 class="text-brand-gold font-serif text-xl mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="packages.html" class="hover:text-white transition-colors">Kashmir Packages</a></li>
+                        <li><a href="ladakh-expeditions.html" class="hover:text-white transition-colors">Ladakh Expeditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>&copy; 2026 Kashveil Tour and Travels. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

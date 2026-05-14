@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladakh Bike Expedition - Kashveil Tour and Travels</title>
+    <link rel="icon" type="image/png" href="static/images/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#1b4332', lightgreen: '#2d6a4f', gold: '#d4af37', lightgold: '#f3e5ab'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%); }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass-nav py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"><img class="h-16 w-auto" src="static/images/logo.png" alt="Kashveil Logo"></a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center font-medium text-sm lg:text-base">
+                    <a href="index.html" class="text-gray-800 hover:text-brand-gold transition-colors">HOME</a>
+                    <a href="packages.html" class="text-gray-800 hover:text-brand-gold transition-colors">KASHMIR PACKAGES</a>
+                    <a href="ladakh-expeditions.html" class="text-brand-green hover:text-brand-gold transition-colors">LADAKH EXPEDITIONS</a>
+                    <a href="about.html" class="text-gray-800 hover:text-brand-gold transition-colors">ABOUT US</a>
+                    <a href="gallery.html" class="text-gray-800 hover:text-brand-gold transition-colors">GALLERY</a>
+                    <a href="contact.html" class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[60vh] min-h-[400px] flex items-end pb-16 pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="static/images/vertical.jpg" alt="Ladakh Bike Expedition" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 px-4 w-full max-w-7xl mx-auto">
+            <div class="inline-block bg-brand-gold text-white font-bold px-4 py-1 rounded-full text-sm mb-4">7 Days / 6 Nights</div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white font-bold mb-4 drop-shadow-lg">Ladakh Bike Expedition</h1>
+            <p class="text-xl text-gray-200 max-w-2xl font-light">Conquer the highest motorable passes and witness the surreal beauty of Pangong Tso and Nubra Valley.</p>
+        </div>
+    </header>
+
+    <div class="bg-white border-b shadow-sm relative z-20 -mt-8 mx-4 md:mx-auto max-w-6xl rounded-xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 text-center md:text-left">
+            <div><p class="text-xs text-gray-500 uppercase font-semibold">Duration</p><p class="font-bold text-gray-900">7D / 6N</p></div>
+            <div><p class="text-xs text-gray-500 uppercase font-semibold">Pickup</p><p class="font-bold text-gray-900">Leh Airport</p></div>
+            <div><p class="text-xs text-gray-500 uppercase font-semibold">Group Size</p><p class="font-bold text-gray-900">Batch of 10-15</p></div>
+            <div><p class="text-xs text-gray-500 uppercase font-semibold">Stay</p><p class="font-bold text-gray-900">Camps & Hotels</p></div>
+        </div>
+    </div>
+
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-2 space-y-12">
+                <div>
+                    <h2 class="text-3xl font-serif text-brand-green font-bold mb-6">Package Overview</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-4">
+                        Gear up for the ultimate adventure in the Himalayas. Our Ladakh Bike Expedition takes you through winding roads, high altitude passes including Khardung La, and the mesmerizing landscapes of Nubra Valley and Pangong Lake.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="sticky top-28 space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100">
+                        <p class="text-sm text-gray-500 font-semibold mb-1">Starting from</p>
+                        <div class="flex items-baseline mb-6">
+                            <span class="text-3xl font-bold text-brand-green">₹28,999</span>
+                            <span class="text-gray-500 ml-2">/ per person</span>
+                        </div>
+                        <form class="space-y-4">
+                            <div><input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-brand-green focus:ring-brand-green p-2 border" placeholder="Your Name"></div>
+                            <div><input type="tel" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-brand-green focus:ring-brand-green p-2 border" placeholder="Phone Number"></div>
+                            <button type="button" class="w-full bg-brand-green text-white font-bold py-3 rounded-lg hover:bg-brand-lightgreen transition-colors shadow-lg">Send Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-green text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400 border-t border-white/20 mt-12">
+            <p>&copy; 2026 Kashveil Tour and Travels. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
