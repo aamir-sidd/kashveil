@@ -65,19 +65,12 @@
         .nav-text-shadow {
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
-        
-        .hero-content-position {
-            transform: translateY(-20%);
-        }
-        @media (min-width: 768px) {
-            .hero-content-position {
-                transform: translateY(-65%);
-            }
-        }
+
 
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
+
         .no-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
@@ -170,7 +163,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-[75vh] md:h-screen min-h-[500px] md:min-h-[600px] flex items-center justify-center pt-20">
+    <section class="relative min-h-[100vh] w-full flex flex-col items-center justify-center pt-28 pb-12">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <img src="static/images/dal-lake.jpg" alt="Dal Lake Kashmir" class="w-full h-full object-cover">
@@ -178,26 +171,27 @@
             <div class="absolute inset-x-0 top-0 z-10 hero-top-shadow"></div>
         </div>
 
-        <!-- Hero Content -->
-        <div class="relative z-10 text-center px-4 w-full max-w-5xl mx-auto flex flex-col items-center justify-center hero-content-position">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white font-bold mb-4 drop-shadow-lg tracking-wide uppercase" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                Unveil the Paradise on Earth
-            </h1>
-            <p class="text-xl md:text-2xl text-white mb-2 drop-shadow-md font-light">
-                Curated Journeys. Local Expertise.
-            </p>
-        </div>
+        <!-- Content Container (Stacks text and cards) -->
+        <div class="relative z-10 w-full flex flex-col items-center gap-12 md:gap-20 mt-4 md:mt-8">
+            
+            <!-- Hero Content -->
+            <div class="text-center px-4 w-full max-w-5xl mx-auto">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white font-bold mb-4 drop-shadow-lg tracking-wide uppercase" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                    Unveil the Paradise on Earth
+                </h1>
+                <p class="text-xl md:text-2xl text-white drop-shadow-md font-light">
+                    Curated Journeys. Local Expertise.
+                </p>
+            </div>
 
-        <!-- Featured Experiences Carousel (Mobile Swipeable, Desktop Grid) -->
-        <div class="absolute bottom-6 left-0 w-full z-20">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <!-- Featured Experiences Carousel -->
+            <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <div id="featured-carousel" class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory no-scrollbar pb-4 md:pb-0">
                     <!-- Card 1 -->
                     <a href="packages.html"
                         class="flex-shrink-0 w-[85%] md:w-auto snap-center group bg-black/40 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl hover:bg-black/60 transition-all duration-300 block p-2 border border-white/10">
                         <div class="relative h-48 md:h-56 overflow-hidden rounded-lg">
-                            <img src="static/images/dal-lake-2.jpg" alt="Srinagar"
-                                class="w-full h-full object-cover card-zoom-image opacity-90 group-hover:opacity-100">
+                            <img src="static/images/dal-lake-2.jpg" alt="Srinagar" class="w-full h-full object-cover card-zoom-image opacity-90 group-hover:opacity-100">
                         </div>
                         <div class="p-4 text-center">
                             <h3 class="font-bold text-white uppercase tracking-wide text-sm md:text-base">Srinagar & Dal Lake</h3>
@@ -208,8 +202,7 @@
                     <a href="gulmarg-adventure.html"
                         class="flex-shrink-0 w-[85%] md:w-auto snap-center group bg-black/40 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl hover:bg-black/60 transition-all duration-300 block p-2 border border-white/10">
                         <div class="relative h-48 md:h-56 overflow-hidden rounded-lg">
-                            <img src="static/images/scene.jpg" alt="Gulmarg"
-                                class="w-full h-full object-cover card-zoom-image opacity-90 group-hover:opacity-100">
+                            <img src="static/images/scene.jpg" alt="Gulmarg" class="w-full h-full object-cover card-zoom-image opacity-90 group-hover:opacity-100">
                         </div>
                         <div class="p-4 text-center">
                             <h3 class="font-bold text-white uppercase tracking-wide text-sm md:text-base">Gulmarg Adventures</h3>
@@ -220,8 +213,7 @@
                     <a href="kashmir-family-tour.html"
                         class="flex-shrink-0 w-[85%] md:w-auto snap-center group bg-black/40 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl hover:bg-black/60 transition-all duration-300 block p-2 border border-white/10">
                         <div class="relative h-48 md:h-56 overflow-hidden rounded-lg">
-                            <img src="static/images/mountain-land-horse.jpg" alt="Pahalgam"
-                                class="w-full h-full object-cover card-zoom-image opacity-90 group-hover:opacity-100">
+                            <img src="static/images/mountain-land-horse.jpg" alt="Pahalgam" class="w-full h-full object-cover card-zoom-image opacity-90 group-hover:opacity-100">
                         </div>
                         <div class="p-4 text-center">
                             <h3 class="font-bold text-white uppercase tracking-wide text-sm md:text-base">Pahalgam Retreats</h3>
@@ -229,6 +221,7 @@
                     </a>
                 </div>
             </div>
+            
         </div>
     </section>
 
