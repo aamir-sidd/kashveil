@@ -65,6 +65,23 @@
         .nav-text-shadow {
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
+        
+        .hero-content-position {
+            transform: translateY(-20%);
+        }
+        @media (min-width: 768px) {
+            .hero-content-position {
+                transform: translateY(-65%);
+            }
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 
@@ -153,7 +170,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-screen min-h-[600px] flex items-center justify-center pt-20">
+    <section class="relative h-[75vh] md:h-screen min-h-[500px] md:min-h-[600px] flex items-center justify-center pt-20">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <img src="static/images/dal-lake.jpg" alt="Dal Lake Kashmir" class="w-full h-full object-cover">
@@ -162,7 +179,7 @@
         </div>
 
         <!-- Hero Content -->
-        <div class="relative z-10 text-center px-4 w-full max-w-5xl mx-auto flex flex-col items-center justify-center" style="transform: translateY(-65%);">
+        <div class="relative z-10 text-center px-4 w-full max-w-5xl mx-auto flex flex-col items-center justify-center hero-content-position">
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white font-bold mb-4 drop-shadow-lg tracking-wide uppercase" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
                 Unveil the Paradise on Earth
             </h1>
@@ -171,43 +188,43 @@
             </p>
         </div>
 
-        <!-- Featured Experiences (Moved Down) -->
-        <div class="absolute bottom-6 left-0 w-full z-20 hidden md:block">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Featured Experiences Carousel (Mobile Swipeable, Desktop Grid) -->
+        <div class="absolute bottom-6 left-0 w-full z-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+                <div id="featured-carousel" class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory no-scrollbar pb-4 md:pb-0">
                     <!-- Card 1 -->
                     <a href="packages.html"
-                        class="group bg-black/40 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl hover:bg-black/60 transition-all duration-300 block p-2 border border-white/10">
-                        <div class="relative h-56 overflow-hidden rounded-lg">
+                        class="flex-shrink-0 w-[85%] md:w-auto snap-center group bg-black/40 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl hover:bg-black/60 transition-all duration-300 block p-2 border border-white/10">
+                        <div class="relative h-48 md:h-56 overflow-hidden rounded-lg">
                             <img src="static/images/dal-lake-2.jpg" alt="Srinagar"
                                 class="w-full h-full object-cover card-zoom-image opacity-90 group-hover:opacity-100">
                         </div>
                         <div class="p-4 text-center">
-                            <h3 class="font-bold text-white uppercase tracking-wide">Srinagar & Dal Lake</h3>
+                            <h3 class="font-bold text-white uppercase tracking-wide text-sm md:text-base">Srinagar & Dal Lake</h3>
                         </div>
                     </a>
 
                     <!-- Card 2 -->
                     <a href="gulmarg-adventure.html"
-                        class="group bg-black/40 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl hover:bg-black/60 transition-all duration-300 block p-2 border border-white/10">
-                        <div class="relative h-56 overflow-hidden rounded-lg">
+                        class="flex-shrink-0 w-[85%] md:w-auto snap-center group bg-black/40 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl hover:bg-black/60 transition-all duration-300 block p-2 border border-white/10">
+                        <div class="relative h-48 md:h-56 overflow-hidden rounded-lg">
                             <img src="static/images/scene.jpg" alt="Gulmarg"
                                 class="w-full h-full object-cover card-zoom-image opacity-90 group-hover:opacity-100">
                         </div>
                         <div class="p-4 text-center">
-                            <h3 class="font-bold text-white uppercase tracking-wide">Gulmarg Adventures</h3>
+                            <h3 class="font-bold text-white uppercase tracking-wide text-sm md:text-base">Gulmarg Adventures</h3>
                         </div>
                     </a>
 
                     <!-- Card 3 -->
                     <a href="kashmir-family-tour.html"
-                        class="group bg-black/40 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl hover:bg-black/60 transition-all duration-300 block p-2 border border-white/10">
-                        <div class="relative h-56 overflow-hidden rounded-lg">
+                        class="flex-shrink-0 w-[85%] md:w-auto snap-center group bg-black/40 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl hover:bg-black/60 transition-all duration-300 block p-2 border border-white/10">
+                        <div class="relative h-48 md:h-56 overflow-hidden rounded-lg">
                             <img src="static/images/mountain-land-horse.jpg" alt="Pahalgam"
                                 class="w-full h-full object-cover card-zoom-image opacity-90 group-hover:opacity-100">
                         </div>
                         <div class="p-4 text-center">
-                            <h3 class="font-bold text-white uppercase tracking-wide">Pahalgam Retreats</h3>
+                            <h3 class="font-bold text-white uppercase tracking-wide text-sm md:text-base">Pahalgam Retreats</h3>
                         </div>
                     </a>
                 </div>
@@ -223,7 +240,7 @@
     </div>
 
     <!-- Popular Packages Preview -->
-    <section class="py-20 bg-gray-50">
+    <section class="pt-10 pb-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-serif text-brand-green font-bold mb-4">Curated Holiday Packages
@@ -722,6 +739,23 @@
 
         // Trigger scroll event on load to set initial state
         window.dispatchEvent(new Event('scroll'));
+
+        // Featured Cards Auto-swipe on Mobile
+        const carousel = document.getElementById('featured-carousel');
+        if (carousel) {
+            let index = 0;
+            const scrollNext = () => {
+                if (window.innerWidth < 768) {
+                    const cards = carousel.querySelectorAll('a');
+                    index = (index + 1) % cards.length;
+                    carousel.scrollTo({
+                        left: cards[index].offsetLeft - 24, // adjust for padding/gap
+                        behavior: 'smooth'
+                    });
+                }
+            };
+            setInterval(scrollNext, 4000);
+        }
     </script>
 </body>
 
