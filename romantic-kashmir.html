@@ -86,7 +86,23 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center font-medium text-sm lg:text-base">
                     <a href="index.html" class="text-gray-800 hover:text-brand-gold transition-colors">HOME</a>
-                    <a href="packages.html" class="text-gray-800 hover:text-brand-gold transition-colors">OUR PACKAGES</a>
+                    
+                    <!-- Dropdown for Packages -->
+                    <div class="relative group">
+                        <a href="packages.html" class="flex items-center text-gray-800 hover:text-brand-gold transition-colors py-4">
+                            OUR PACKAGES
+                            <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="absolute left-0 mt-0 w-48 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left z-50 py-2 border border-gray-100 translate-y-2 group-hover:translate-y-0">
+                            <a href="packages.html?filter=all" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">All Packages</a>
+                            <a href="packages.html?filter=fun" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">Fun & Leisure</a>
+                            <a href="packages.html?filter=adventure" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">Adventure</a>
+                            <a href="packages.html?filter=couples" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">Couples</a>
+                            <a href="packages.html?filter=family" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">Family</a>
+                            <a href="packages.html?filter=ladakh" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">Ladakh</a>
+                        </div>
+                    </div>
+
                     <a href="about.html" class="text-gray-800 hover:text-brand-gold transition-colors">ABOUT US</a>
                     <a href="gallery.html" class="text-gray-800 hover:text-brand-gold transition-colors">GALLERY</a>
                     <a href="contact.html" class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">BOOK NOW</a>
@@ -103,14 +119,14 @@
             </div>
         </div>
         
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl border-t">
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-xl border-t absolute w-full left-0 top-full overflow-hidden transition-all duration-300 ease-in-out max-h-0">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 text-gray-800">HOME</a>
-                <a href="packages.html" class="block px-3 py-2 text-brand-green font-medium">KASHMIR PACKAGES</a>
-                <a href="ladakh-expeditions.html" class="block px-3 py-2 text-gray-800">LADAKH EXPEDITIONS</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-800">ABOUT US</a>
-                <a href="gallery.html" class="block px-3 py-2 text-gray-800">GALLERY</a>
+                <a href="index.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">HOME</a>
+                <a href="packages.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">OUR PACKAGES</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">ABOUT US</a>
+                <a href="gallery.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">GALLERY</a>
+                <a href="contact.html" class="block px-3 py-2 text-brand-green font-bold">BOOK NOW</a>
             </div>
         </div>
     </nav>
@@ -341,7 +357,7 @@
                     <ul class="space-y-2 text-gray-300">
                         <li>Srinagar, Jammu and Kashmir</li>
                         <li>Phone: 9906891014 / 7006869032</li>
-                        <li>Email: Kashveilholiday@gmail.com</li>
+                        <li>Email: <a href="mailto:Kashveilholiday@gmail.com" class="hover:text-white transition-colors">Kashveilholiday@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -357,12 +373,19 @@
     </a>
 
     <script>
+        // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
+
         btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            if (menu.style.maxHeight && menu.style.maxHeight !== '0px') {
+                menu.style.maxHeight = '0px';
+            } else {
+                menu.style.maxHeight = menu.scrollHeight + 'px';
+            }
         });
     </script>
 </body>
 </html>
+
 

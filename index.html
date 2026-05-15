@@ -103,50 +103,28 @@
                 </div>
 
                 <!-- Desktop Menu -->
-                <div id="nav-links"
-                    class="hidden md:flex space-x-8 items-center font-medium text-sm lg:text-base text-white nav-text-shadow">
+                <div id="nav-links" class="hidden md:flex space-x-8 items-center font-medium text-sm lg:text-base text-white nav-text-shadow">
                     <a href="index.html" class="hover:text-brand-gold transition-colors">HOME</a>
-
+                    
+                    <!-- Dropdown for Packages -->
                     <div class="relative group">
-                        <a href="packages.html" class="hover:text-brand-gold transition-colors flex items-center">
+                        <a href="packages.html" class="flex items-center hover:text-brand-gold transition-colors py-4">
                             OUR PACKAGES
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </a>
-                        <!-- Dropdown -->
-                        <div
-                            class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left">
-                            <div class="py-1">
-                                <a href="packages.html?cat=fun"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Fun
-                                    & Leisure</a>
-                                <a href="packages.html?cat=adventure"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Adventure
-                                    Tours</a>
-                                <a href="packages.html?cat=couples"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Couples
-                                    Special</a>
-                                <a href="packages.html?cat=honeymoon"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Honeymoon
-                                    Specials</a>
-                                <a href="packages.html?cat=family"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Family
-                                    Vacations</a>
-                                <a href="packages.html?cat=ladakh"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Ladakh
-                                    Tours</a>
-                            </div>
+                        <div class="absolute left-0 mt-0 w-48 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left z-50 py-2 border border-gray-100 translate-y-2 group-hover:translate-y-0">
+                            <a href="packages.html?filter=all" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">All Packages</a>
+                            <a href="packages.html?filter=fun" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">Fun & Leisure</a>
+                            <a href="packages.html?filter=adventure" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">Adventure</a>
+                            <a href="packages.html?filter=couples" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">Couples</a>
+                            <a href="packages.html?filter=family" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">Family</a>
+                            <a href="packages.html?filter=ladakh" class="block px-4 py-2 text-gray-800 hover:bg-gray-50 hover:text-brand-green transition-colors font-medium">Ladakh</a>
                         </div>
                     </div>
 
                     <a href="about.html" class="hover:text-brand-gold transition-colors">ABOUT US</a>
                     <a href="gallery.html" class="hover:text-brand-gold transition-colors">GALLERY</a>
-
-                    <a href="contact.html"
-                        class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">BOOK
-                        NOW</a>
+                    <a href="contact.html" class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">BOOK NOW</a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -162,7 +140,7 @@
         </div>
 
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="md:hidden bg-white shadow-xl border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+        <div id="mobile-menu" class="md:hidden bg-white shadow-xl border-t absolute w-full left-0 top-full overflow-hidden transition-all duration-300 ease-in-out max-h-0">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" class="block px-3 py-2 text-brand-green font-medium">HOME</a>
                 <a href="packages.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">OUR PACKAGES</a>
@@ -237,10 +215,10 @@
     </section>
 
     <!-- Contact Strip (Gold) -->
-    <div
-        class="bg-brand-gold text-gray-900 py-3 font-bold text-center text-sm md:text-base border-b-[6px] border-brand-green tracking-wide">
-        <p>CALL US: 7006869032 / 9906891014 <span class="hidden md:inline">|</span><br class="md:hidden"> EMAIL:
-            Kashveilholiday@gmail.com</p>
+    <div class="bg-brand-gold text-gray-900 py-3 font-bold text-center text-sm md:text-base border-b-[6px] border-brand-green tracking-wide">
+        <p>CALL US: <a href="tel:7006869032" class="hover:underline">7006869032</a> / <a href="tel:9906891014" class="hover:underline">9906891014</a> 
+        <span class="hidden md:inline">|</span><br class="md:hidden"> 
+        EMAIL: <a href="mailto:Kashveilholiday@gmail.com" class="hover:underline">Kashveilholiday@gmail.com</a></p>
     </div>
 
     <!-- Popular Packages Preview -->
@@ -857,8 +835,8 @@
                     <h4 class="text-brand-gold font-serif text-xl mb-4">Contact Us</h4>
                     <ul class="space-y-2 text-gray-300">
                         <li>Srinagar, Jammu and Kashmir</li>
-                        <li>Phone: 7006869032 / 9906891014</li>
-                        <li>Email: Kashveilholiday@gmail.com</li>
+                        <li>Phone: <a href="tel:7006869032" class="hover:text-white transition-colors">7006869032</a> / <a href="tel:9906891014" class="hover:text-white transition-colors">9906891014</a></li>
+                        <li>Email: <a href="mailto:Kashveilholiday@gmail.com" class="hover:text-white transition-colors">Kashveilholiday@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -967,3 +945,4 @@
 </body>
 
 </html>
+
